@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>form and jquery</title>
+    <style>
+        body {
+            background-color: #151a18;
+        }
+
+        #wrapper {
+            width: 400px;
+            height: 700px;
+            border: 1px solid black;
+            margin-left: 30%;
+            padding-left: 40px;
+            background-color: #373838;
+            box-shadow: 2px 2px 15px 1px #ffffff;
+        }
+
+        label {
+            color: #21e6d2;
+        }
+
+        p {
+            color: #ff6a00;
+        }
+
+        span {
+            margin-left: 10px;
+            color: #21e6d2;
+        }
+
+        .check {
+            margin-left: 30px;
+        }
+
+        #titulo_pago {
+            width: 110px;
+            float: left;
+        }
+
+        #enviar {
+            margin-left: 39%;
+            margin-top: 20px;
+            background-color: #ff6a00;
+            border: none;
+            color: #ffffff;
+            width: 60px;
+            height: 20px;
+        }
+
+        #usuario_info {
+            width: 300px;
+            text-align: center;
+            margin-left: -40px;
+        }
+
+        #tarjetas {
+            width: 300px;
+            margin-left: -10px;
+        }
+
+        .input {
+            width: 160px;
+        }
+        #numero_tarjeta, #date, #email {
+            background-color: #373838;
+            visibility: hidden;
+        }
+        
+
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+  <script src="Script1.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+
+        <form id="formulario"method="get">
+
+            <p>Datos del usuario</p>
+            <div id="usuario_info">
+                &nbsp; <label>Nombre</label>
+                <input type="text" name="nombre"  id="nombre" class="input"  /><br /><br />
+                <label>Direccion</label>
+                <input type="text" name="direccion" class="input" id="address"/><br /><br />
+                &nbsp; &nbsp; <label>Ciudad</label>
+                <input type="text" name="cuidad" class="input" id="city" /><br /><br />
+                &nbsp; &nbsp;<label>C/Postal</label>
+                <input type="text" name="codigo" class="input" id="cp" /><br /><br /><br />
+            </div>
+
+            <p id="titulo_pago">Metodo de pago</p>
+            <div id="menu_pago">
+                <input type="radio" name="service" value="PayPal" class="check" id="paypal" /><span>PayPal</span><br />
+                <input type="radio" name="service" value="tarjetavisa" class=" check" id="visa"/><span>Visa</span><br />
+                <input type="radio" name="service" value="tarjetamaster" class=" check" id="master"/><span>MasterCard</span><br />
+            </div>
+            <p>Datos de pago</p><br />
+            <div id="tarjetas">
+                <label>Numero de tarjeta</label><br />
+                <input type="text" name="numerotarjeta" class="input" id="numero_tarjeta" disabled /><br /><br />
+                <label>Fecha de Expiracion</label><br />
+                <input type="date" name="date" class="input" id="date" disabled/><br /><br />
+                <label>Email</label><br />
+                <input type="email" name=" email" class="input" id="email" disabled /><br /><br />
+            </div>
+            <p>Pais</p>
+            <select name="País">
+                <option value="Colombia">Colombia</option>
+                <option value="perú">Perú</option>
+                <option value="ecuador">Ecuador</option>
+                <option value="venezuela">Venezuela</option>
+                <option value="argentina">Argentina</option>
+                <option value="bolivia">Bolivia</option>
+                <option value="chile">Chile</option>
+            </select><br /><br />
+            <input type="submit" value="Enviar" id="enviar" />
+
+        </form>
+
+
+    </div>
+   
+</body>
+</html>
